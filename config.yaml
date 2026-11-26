@@ -1,0 +1,156 @@
+# ─────────────────────────────────────────────────────────────
+#  TourAZ watcher – settings you are likely to edit
+# ─────────────────────────────────────────────────────────────
+
+# Short description of the company, used by the (optional) AI filter.
+# The more specific, the better the filtering.
+company_profile: >
+  We are a travel / DMC company working with Korea. We are interested in
+  (1) anything concerning Russia, CIS countries (Kazakhstan, Uzbekistan,
+  Kyrgyzstan, Tajikistan, Turkmenistan, Azerbaijan, Armenia, Georgia, Belarus,
+  Moldova) and Spanish-speaking markets (Spain, Mexico, Latin America);
+  (2) MICE – conferences, incentives, exhibitions, unique venues, MICE bureaus;
+  (3) medical and wellness tourism;
+  (4) sports tourism – especially cycling, running/marathons and athletics,
+  but other sports events, training camps and sports travel products too.
+  We care about calls for participants, sales calls/roadshows abroad,
+  fam trips, subsidies for travel agencies, fairs and events we could join.
+
+# Language the memo is written in (only used when the AI filter is on).
+memo_language: English
+
+# Which board tabs to scan and how many pages of each (16 posts per page).
+#  ktoip = "투어라즈 공모" (KTO's own calls – the link you were given)
+#  other = "유관기관 공모" (regional tourism bodies, ~25 posts/week)
+tabs:
+  ktoip: 4
+  other: 5
+
+# Send an email even when nothing relevant was found ("nothing new" note)?
+send_when_empty: false
+
+# AI model (only used if ANTHROPIC_API_KEY is set). Haiku = cheapest.
+llm_model: claude-haiku-5-5
+
+# ─────────────────────────────────────────────────────────────
+#  Code words. Matching is case-insensitive substring matching;
+#  Latin-alphabet words must match as whole words.
+#  Without an API key these lists ARE the filter; with a key they
+#  are hints and a safety net (keyword hits are never silently lost).
+# ─────────────────────────────────────────────────────────────
+keywords:
+  Russia / CIS:
+    - 러시아
+    - 극동
+    - 블라디보스토크
+    - 블라디보스톡
+    - 하바롭스크
+    - 사할린
+    - 모스크바
+    - 상트페테르부르크
+    - 노보시비르스크
+    - 이르쿠츠크
+    - 독립국가연합
+    - CIS
+    - 중앙아시아
+    - 카자흐스탄
+    - 알마티
+    - 우즈베키스탄
+    - 타슈켄트
+    - 키르기스
+    - 타지키스탄
+    - 투르크메니스탄
+    - 아제르바이잔
+    - 아르메니아
+    - 조지아
+    - 벨라루스
+    - 몰도바
+    - 러시아어
+    - Russia
+  Spanish-speaking:
+    - 스페인
+    - 마드리드
+    - 바르셀로나
+    - FITUR
+    - 중남미
+    - 남미
+    - 라틴
+    - 멕시코
+    - 아르헨티나
+    - 칠레
+    - 콜롬비아
+    - 페루
+    - 에콰도르
+    - 쿠바
+    - 베네수엘라
+    - 우루과이
+    - 파라과이
+    - 볼리비아
+    - 코스타리카
+    - 파나마
+    - 과테말라
+    - 도미니카
+    - 스페인어
+    - Spain
+    - Mexico
+    - LATAM
+  MICE:
+    - MICE
+    - 마이스
+    - 컨벤션
+    - 국제회의
+    - 전시회
+    - 전시컨벤션
+    - 유니크베뉴
+    - 인센티브 투어
+    - 인센티브관광
+    - 포상관광
+    - 기업회의
+    - 기업행사
+    - 컨벤션뷰로
+    - 코리아MICE
+    - K-MICE
+  Medical / wellness:
+    - 의료관광
+    - 의료
+    - 메디컬
+    - 웰니스
+    - 의료웰니스
+    - 외국인환자
+    - 헬스케어
+    - 한방
+    - 치유관광
+    - medical
+    - wellness
+  Sports – cycling / running / athletics:
+    - 자전거
+    - 사이클
+    - 라이딩
+    - 그란폰도
+    - 마라톤
+    - 러닝
+    - 런트립
+    - 달리기
+    - 육상
+    - 트레일러닝
+    - 트라이애슬론
+    - 철인
+    - marathon
+    - cycling
+    - running
+  Sports – other:
+    - 스포츠
+    - 전지훈련
+    - 국제대회
+    - 체육
+    - 골프
+    - 스키
+    - 축구
+    - K리그
+    - 야구
+    - 태권도
+    - 등산
+    - 트레킹
+    - 해양레저
+    - 레저스포츠
+    - 동계스포츠
